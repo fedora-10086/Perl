@@ -1,0 +1,35 @@
+ yum install -y perl-CPAN
+
+
+Can't locate Term/ReadKey.pm in @INC
+wget http://search.cpan.org/CPAN/authors/id/J/JS/JSTOWE/TermReadKey-2.37.tar.gz
+
+ yum install perl-ExtUtils-CBuilder perl-ExtUtils-MakeMaker
+
+解决方法 ：
+在终端中输入
+#cpan
+如果不行，则输入
+#perl -MCPAN -e "shell".
+然后出现cpan>提示符后，输入命令
+install Term::ReadKey
+正常情况下， 系统就会自动寻找合适的镜像站点，从网络安装Term::ReadKey.
+再编译或运行,程序就可以了。
+
+
+
+
+Can't locate CPAN.pm in @INC
+
+没有安装CPAN模块所致
+从此处下载CPAN，http://search.cpan.org/CPAN/authors/id/A/AN/ANDK/CPAN-2.16.tar.gz
+
+tar xf CPAN-2.16.tar.gz
+cd CPAN-2.16
+perl Makefile.PL
+make
+make install
+
+进入CPAN的shell模式
+
+perl -MCPAN -e shell
